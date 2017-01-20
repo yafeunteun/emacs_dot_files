@@ -1,0 +1,36 @@
+#+TITLE: My first config with org-mode
+#+AUTHOR: Yann Feunteun
+
+* Loading first package 
+#+BEGIN_SRC emcs-lisp
+  (package-initialize)
+#+END_SRC
+
+* Org-babel
+
+#+BEGIN_SRC emacs-lisp
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (python . t)
+   (R . t)
+   (ruby . t)
+   (C . t)
+   (java . t)
+   (calc . t)
+   (lisp . t)
+   (scheme . t)
+   (sh . t)
+   (latex . t)
+   (dot . t)
+   (octave . t)
+   (sqlite . t)
+   (js . t)
+   (perl . t)
+   ))
+ (setq org-babel-python-command "python3")
+#+END_SRC
+
+* Load config file manually 
+[[elisp:org-babel-load-file][Choose file to load]]
